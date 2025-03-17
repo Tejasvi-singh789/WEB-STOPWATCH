@@ -83,3 +83,12 @@ button:focus
     color: #F6B400;
     box-shadow: 0px 4px 27px -12px #F6B400;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
