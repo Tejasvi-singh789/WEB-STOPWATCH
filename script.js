@@ -7,6 +7,7 @@ let getMins = document.querySelector('.mins');
 let btnStart = document.querySelector('.btn-start');
 let btnStop = document.querySelector('.btn-stop');
 let btnReset = document.querySelector('.btn-reset');
+let btnLapping = document.querySelector('.btn-lapping');
 let interval;
 
 btnStart.addEventListener('click', () => {
@@ -51,6 +52,16 @@ function startTimer(){
     }
     if(mins > 9){
         getSeconds.innerHTML = mins;
+    }
+}
+
+function recordLap() {
+    if (running) {
+        lapCount++;
+        const lapTime = formatTime(difference);
+        const lapItem = document.createElement("li");
+        lapItem.textContent = `Lap ${lapCount}: ${lapTime}`;
+        lapList.appendChild(lapItem);
     }
 }
 
